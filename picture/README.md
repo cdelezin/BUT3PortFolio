@@ -1,0 +1,9 @@
+Ajoute ici tes images.
+
+Noms recommandés pour l'index actuel :
+- photo-01.jpg
+- photo-02.jpg
+- photo-03.jpg
+- photo-04.jpg
+- photo-05.jpg
+- photo-06.jpg

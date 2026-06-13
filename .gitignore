@@ -1,0 +1,9 @@
+.vscode/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+Projets/
+Projets/S5/Projet Perceptron/Reseaux_neurones/Reseaux_neurones/.venv/
+Projets/S5/Projet Perceptron/Reseaux_neurones/Reseaux_neurones/data/
+Projets/S5/Projet Perceptron/Reseaux_neurones/Reseaux_neurones/models/
+Projets/S5/Projet Perceptron/Reseaux_neurones/Reseaux_neurones/Resultats/
