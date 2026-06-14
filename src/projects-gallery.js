@@ -436,18 +436,15 @@ const PROJECTS = [
   accent: 'linear-gradient(135deg, #13aa52, #001e2b)', 
   summary: 'Migration complète d\'un système d\'information de transport urbain et environnemental depuis SQLite vers MongoDB, couplée au développement d\'un dashboard cartographique.',
   detailsHtml: `
-    <h3>Langages et Outils utilisés</h3>
+    <h3>Langages et outils utilisés</h3>
     <p>Python, MongoDB, PyMongo, SQLite, Streamlit (ou Plotly/Flask), Folium (Cartographie)</p>
 
     <h3>Description du projet</h3>
-    <p>Dans un contexte futuriste (Paris en 2055), ce projet de SAÉ avait pour objectif de moderniser le système de suivi des transports en commun et de l'empreinte écologique de la métropole. Face à l'apparition de flux de capteurs en temps réel et de données semi-structurées, l'infrastructure relationnelle classique sous SQLite a montré ses limites, imposant une transition vers une architecture NoSQL.</p>
-    <p>Le projet a été mené de bout en bout à travers quatre grandes étapes techniques :</p>
-    <ul>
-      <li><strong>Analyse et requêtage relationnel :</strong> Immersion dans la base SQLite d'origine pour comprendre la structure des tables (lignes, arrêts, véhicules, mesures de pollution) et valider les données de référence via des requêtes SQL.</li>
-      <li><strong>Pipeline de Migration (ETL) :</strong> Conception et implémentation d'un script de migration robuste sous Python. Cette étape clé a nécessité de repenser complètement la modélisation des données en passant d'un schéma relationnel normalisé à une structure de documents JSON imbriqués (modèle dénormalisé) propre à MongoDB.</li>
-      <li><strong>Requêtage NoSQL Avancé :</strong> Développement de requêtes d'agrégation complexes et de filtres sous MongoDB pour extraire des indicateurs métiers (calculs de retards moyens, bilans d'émissions de CO2, croisements de capteurs).</li>
-      <li><strong>Dashboard et Cartographie Dynamique :</strong> Restitution visuelle des résultats via une interface interactive. Intégration de graphiques analytiques (Pandas/Matplotlib) et génération d'une carte choroplèthe interactive (Folium) affichant le niveau moyen de CO2 par quartier, ainsi que des marqueurs géographiques filtrables détaillant l'impact sonore et thermique à chaque arrêt de bus.</li>
-    </ul>
+    <p>Dans un contexte futuriste représentant la ville de Paris en 2055, ce projet de SAÉ avait pour objectif de moderniser le système de suivi des transports en commun et de l'empreinte écologique de la métropole. Face à l'apparition de flux de capteurs en temps réel et de données semi-structurées, l'infrastructure relationnelle classique sous SQLite a montré ses limites, imposant une transition nécessaire vers une architecture NoSQL. Le projet a été mené de bout en bout à travers quatre grandes étapes techniques successives.</p>
+    
+    <p>Le travail a débuté par une phase d'analyse et de requêtage relationnel, nécessitant une immersion dans la base SQLite d'origine pour comprendre la structure des tables telles que les lignes, les arrêts, les véhicules ou les mesures de pollution, et valider ainsi les données de référence via des requêtes SQL. Par la suite, la conception et l'implémentation d'un pipeline de migration (ETL) à l'aide d'un script robuste sous Python ont constitué une étape clé. Ce processus a demandé de repenser complètement la modélisation des données en passant d'un schéma relationnel normalisé à une structure de documents JSON imbriqués et dénormalisés propre à MongoDB.</p>
+    
+    <p>Une fois la migration effectuée, la phase de requêtage NoSQL avancé a permis de développer des requêtes d'agrégation complexes et des filtres sous MongoDB afin d'extraire des indicateurs métiers stratégiques comme les calculs de retards moyens, les bilans d'émissions de CO2 et les croisements de capteurs. Enfin, l'étape finale a consisté à concevoir un dashboard et une cartographie dynamique pour la restitution visuelle des résultats via une interface interactive. Ce module intègre des graphiques analytiques développés avec Pandas et Matplotlib, ainsi qu'une carte choroplèthe interactive générée sous Folium affichant le niveau moyen de CO2 par quartier et des marqueurs géographiques filtrables détaillant l'impact sonore et thermique à chaque arrêt de bus.</p>
 
     <h3>Compétences et connaissances acquises</h3>
     <p>Ce projet technique et transverse valide des compétences clés du parcours VCOD :</p>
@@ -483,18 +480,15 @@ const PROJECTS = [
   accent: 'linear-gradient(135deg, #9c1be2, #9c1be2)', 
   summary: 'Développement d\'un chatbot intelligent basé sur une architecture RAG (Retrieval-Augmented Generation) agissant comme un jumeau virtuel pour explorer mon profil professionnel.',
   detailsHtml: `
-    <h3>Technologies et Outils envisagés</h3>
-    <p>LLM (Large Language Models), Architecture RAG, Tokenisation & Chunking, Embeddings (Vecteurs), Bases de données vectorielles (FAISS / Chroma / Pinecone), Framework d'IA (LangChain / LlamaIndex)</p>
+    <h3>Langages et outils utilisés</h3>
+    <p>Python, Large Language Models (LLMs), Frameworks d'IA (LangChain / LlamaIndex), Vector Stores (FAISS / Chroma), Tokenisation & Embeddings</p>
 
     <h3>Description du projet</h3>
-    <p>Ce projet innovant de fin de cursus a pour objectif de transformer un portfolio statique traditionnel en une plateforme web interactive et intelligente. Pour se démarquer, le site intègre un agent conversationnel autonome (chatbot) capable de répondre précisément aux recruteurs en se comportant comme mon jumeau virtuel.</p>
-    <p>N'ayant pas nativement accès à mes données privées, le chatbot s'appuie sur la méthodologie <strong>RAG (Retrieval-Augmented Generation)</strong> pour fournir des réponses fiables et contextualisées. Le travail technique comprend plusieurs étapes clés de l'ingénierie LLM :</p>
-    <ul>
-      <li><strong>Préparation du corpus de connaissances :</strong> Extraction, nettoyage et découpage (<i>chunking</i>) de l'ensemble de mes données professionnelles (CV, rapports de projets, compétences, réalisations).</li>
-      <li><strong>Vectorisation (Embeddings) :</strong> Transformation des blocs de texte non structurés en vecteurs numériques de haute dimension (représentation sémantique) à l'aide d'un modèle d'embedding.</li>
-      <li><strong>Indexation et Stockage :</strong> Sauvegarde et organisation de ces vecteurs au sein d'une base de données vectorielle (Store) spécialisée.</li>
-      <li><strong>Pipeline de Récupération et Génération :</strong> Implémentation de la recherche sémantique. Lorsqu'un utilisateur pose une question (ex: <i>"Quelles sont tes compétences en Big Data ?"</i>), le système extrait le contexte pertinent de la base vectorielle, construit un prompt guidé, et interroge le LLM pour générer une réponse naturelle et sans hallucination.</li>
-    </ul>
+    <p>Ce projet innovant de fin de cursus a pour objectif de transformer un portfolio statique traditionnel en une plateforme web interactive et intelligente. Pour se démarquer de la concurrence, le site intègre un agent conversationnel autonome capable de répondre précisément aux recruteurs en se comportant comme mon jumeau virtuel. N'ayant pas nativement accès à mes données privées, le chatbot s'appuie sur la méthodologie RAG (Retrieval-Augmented Generation) pour fournir des réponses fiables et contextualisées.</p>
+    
+    <p>Le travail technique comprend plusieurs étapes clés de l'ingénierie LLM, à commencer par la préparation complète du corpus de connaissances. Cette phase initiale requiert l'extraction, le nettoyage et le découpage en blocs sémantiques ou morceaux (<i>chunking</i>) de l'ensemble de mes données professionnelles personnelles, telles que mon CV, mes rapports de projets, mes compétences et mes réalisations passées. Vient ensuite l'étape de vectorisation (<i>embeddings</i>), consistant à transformer ces blocs de texte non structurés en vecteurs numériques de haute dimension pour obtenir une représentation sémantique mathématique à l'aide d'un modèle d'embedding dédié.</p>
+    
+    <p>Une fois vectorisées, l'indexation et le stockage permettent de sauvegarder et d'organiser efficacement ces données vectorielles au sein d'un <i>Vector Store</i>, une base de données spécialisée. Pour finir, la mise en place du pipeline de récupération et de génération vient orchestrer l'implémentation de la recherche sémantique. Lorsqu'un utilisateur pose une question au jumeau virtuel, comme par exemple l'interroger sur mes compétences en Big Data, le système extrait instantanément le contexte le plus pertinent de la base vectorielle, construit un prompt guidé et sécurisé, puis interroge le LLM pour générer une réponse fluide, naturelle et totalement exempte d'hallucinations.</p>
 
     <h3>Compétences et connaissances acquises</h3>
     <p>Ce projet avant-gardiste concrétise ma spécialisation dans le domaine de l'Intelligence Artificielle Générative (Parcours VCOD) :</p>
@@ -514,56 +508,50 @@ const PROJECTS = [
     ],
   },
   {
-    slug: 'perceptron',
-    title: 'Discrimination d’images par réseaux de neurones - Projet Perceptron',
-    periode: 'BUT 3',
-    semester: 'S5',
-    image: '../picture/PhotosProjets/Perceptron.png', 
-    date: '2024-11-30',
-    note: '15/20',
-    teamSize: 2,
-    accent: 'linear-gradient(135deg, #ff9a56, #ff7e3f)',
-    summary: 'Projet de classification d’images du dataset Wang avec MLP, CNN et transfer learning.',
-    detailsHtml: `
-      <p>Ce projet, réalisé dans le cadre du module « Introduction aux réseaux de neurones » au semestre 5 du BUT Science des Données, porte sur la classification automatisée d’images. L’enjeu principal consistait à concevoir et comparer différentes architectures de modèles capables de catégoriser une image inconnue parmi dix classes distinctes (Jungle, Plage, Monuments, Bus, Dinosaures, Éléphants, Fleurs, Chevaux, Montagne et Plats) issues du dataset Wang.</p>
+  slug: 'projet-perceptron-reseaux-neurones',
+  title: 'Discrimination d\'Images par Réseaux de Neurones',
+  periode: 'BUT 3',
+  semester: 'S5',
+  date: '2025-11-30', // Mis à jour selon l'année universitaire 2025/2026 de votre rapport
+  note: '15/20',
+  teamSize: 2,
+  image: '../picture/PhotosProjets/Perceptron.png', 
+  accent: 'linear-gradient(135deg, #ff6b6b, #ff8e53)', // Dégradé dynamique chaud évoquant les activations de neurones
+  summary: 'Classification automatisée d\'images complexes du dataset Wang à travers l\'implémentation et la comparaison de modèles MLP, CNN et de Transfer Learning.',
+  detailsHtml: `
+    <h3>Langages et outils utilisés</h3>
+    <p>Python, TensorFlow / Keras, NumPy, Pandas, Scikit-Learn, Matplotlib</p>
 
-      <h3>Méthodologie et Évolution des Approches</h3>
-      <p>La réalisation de ce projet s’est articulée autour de trois étapes majeures, marquant une progression technique dans la manipulation des données et la complexité des modèles :</p>
+    <h3>Description du projet</h3>
+    <p>Ce projet, réalisé dans le cadre du module d'introduction aux réseaux de neurones, avait pour objectif de concevoir un système automatisé performant capable de classifier une image inconnue parmi dix catégories distinctes issues du dataset de référence Wang. L'étude s'est concentrée sur des classes visuellement variées et parfois trompeuses telles que les jungles, plages, monuments, bus, dinosaures, éléphants, fleurs, chevaux, montagnes et plats. La démarche s'est structurée autour d'une progression technique itérative visant à mesurer l'apport de la complexification des architectures de Deep Learning sur la précision de la discrimination.</p>
 
-      <ol>
-        <li>
-          <strong>Approche par descripteurs et structure Full-Connected</strong>
-          <p>La première phase a consisté à utiliser des vecteurs de signatures pré-extraits des images. Le travail a débuté par la normalisation des données via un StandardScaler afin de garantir une convergence optimale du gradient. Un premier réseau de neurones denses (Multilayer Perceptron) a été implémenté. Cette étape a permis de poser les bases de l’évaluation des performances par l'analyse des matrices de confusion et des rapports de classification (précision, rappel, F1-score).</p>
-        </li>
-        <li>
-          <strong>Approche Deep Learning par modèle CNN "From Scratch"</strong>
-          <p>Pour pallier les limites des descripteurs classiques, un réseau de neurones convolutifs (CNN) a été développé. Contrairement à l'approche précédente, ce modèle apprend directement les caractéristiques spatiales des images. L’architecture mise en place intègre des couches de convolution (Conv2D) pour l’extraction de motifs, suivies de couches de Pooling pour la réduction de dimensionnalité. L'ajout de couches de Dropout a été nécessaire pour régulariser le modèle et limiter les phénomènes de surapprentissage.</p>
-        </li>
-        <li>
-          <strong>Optimisation par Transfer Learning</strong>
-          <p>La dernière phase a exploré l'utilisation de modèles pré-entraînés. Cette méthode de transfert d'apprentissage permet de mobiliser des connaissances acquises sur de vastes bases de données pour les appliquer à notre problématique spécifique, optimisant ainsi le temps de calcul tout en augmentant la robustesse de la discrimination.</p>
-        </li>
-      </ol>
+    <p>La première phase a consisté à travailler sur une approche par descripteurs et structure entièrement connectée. À partir de vecteurs de signatures pré-extraits, les données ont été nettoyées et normalisées à l'aide d'un StandardScaler afin d'optimiser le calcul et d'assurer une convergence fluide de la descente de gradient. Un premier réseau d'apprentissage denses de type Perceptron Multicouche (MLP) a été développé, posant les bases de notre protocole d'évaluation grâce à l'analyse fine des matrices de confusion, de la précision, du rappel et du F1-score. Face aux limites de cette structure sur les données complexes, une approche Deep Learning par modèle convolutif (CNN) a été conçue de bout en bout pour apprendre directement les caractéristiques spatiales et les motifs des images brutes. L'architecture a intégré des couches de convolution (Conv2D) et de Max Pooling, sécurisées par des couches de Dropout pour régulariser le modèle et freiner le surapprentissage.</p>
 
-      <h3>Analyse des difficultés et solutions apportées</h3>
-      <p>Le développement de ces modèles a soulevé plusieurs défis techniques significatifs. Le surapprentissage a été la problématique principale, identifiée par un écart important entre la perte sur les données d'entraînement et les données de validation. Ce problème a été résolu par l'ajustement des hyperparamètres (learning rate, batch size) et l'intégration de techniques de régularisation.</p>
-      <p>Par ailleurs, l'analyse fine des résultats a révélé des confusions entre certaines classes présentant des similarités visuelles fortes, comme les paysages de plage et de montagne. Une analyse critique des courbes d'apprentissage a permis d'orienter les choix d'architecture pour améliorer la capacité de généralisation du système.</p>
+    <p>La dernière étape a exploré la technique du Transfer Learning en s'appuyant sur des architectures profondes pré-entraînées sur de très larges bases d'images. Cette méthode a permis de transférer des connaissances visuelles robustes vers notre problématique métier, optimisant de manière significative le coût computationnel et le temps de calcul. Le développement a soulevé des défis concrets, notamment la gestion du surapprentissage identifié par le décrochage des courbes de perte entre l'entraînement et la validation, ainsi que les confusions logiques entre les paysages de plage et de montagne. L'ajustement rigoureux des hyperparamètres comme le taux d'apprentissage et la taille des lots a permis d'accroître la capacité de généralisation globale de notre système.</p>
 
-      <h3>Conclusion et Perspectives</h3>
-      <p>Ce projet démontre une montée en compétences dans la maîtrise de l'écosystème TensorFlow/Keras et dans l'exploitation de bases de données non structurées. La comparaison des différentes approches a permis de conclure que si les modèles profonds offrent une précision supérieure, leur efficacité repose sur une préparation rigoureuse des données et une gestion fine de la complexité architecturale. Ce travail constitue une base solide pour des missions de Data Science orientées vers la vision par ordinateur.</p>
-
-      <h3>Compétences mobilisées (Référentiel BUT SD)</h3>
-      <ul>
-        <li><strong>Exploitation de base de données :</strong> Gestion et indexation de flux d'images brutes et de vecteurs de signatures.</li>
-        <li><strong>Modélisation statistique et apprentissage :</strong> Conception, entraînement et évaluation de modèles prédictifs complexes.</li>
-        <li><strong>Programmation logicielle :</strong> Développement en Python de pipelines complets de traitement de données et de Deep Learning.</li>
-      </ul>
-
-      <p>Projet réalisé en duo avec Decoust Choé, note : 15.</p>
-    `,
-    reportHref: '../Projets/S5/Projet Perceptron/Projet Perceptron Decoust Chloé, Delezinier Camille.pdf',
-    reportDownloadName: 'Projet Perceptron - Rapport.pdf',
-  },
+    <h3>Compétences et connaissances acquises</h3>
+    <ul>
+      <li><strong>Traiter des données complexes et non structurées (Compétence 1 & 2) :</strong> Capacité à manipuler et standardiser des flux d'images et des matrices de signatures complexes, et à analyser de manière critique des courbes d'apprentissage pour orienter la performance d'un modèle.</li>
+      <li><strong>Développer un outil décisionnel basé sur l'IA (Compétence 4) :</strong> Maîtrise opérationnelle de l'écosystème TensorFlow et Keras pour concevoir, entraîner, évaluer et optimiser des pipelines de classification de pointe (MLP, CNN et Transfer Learning).</li>
+      <li><strong>Analyse et rigueur méthodologique :</strong> Capacité à dresser un diagnostic précis des dysfonctionnements d'un réseau (surapprentissage, biais de confusion visuelle) et à y apporter des solutions de régularisation industrielles adaptées.</li>
+    </ul>
+  `,
+  resourceButtons: [
+    {
+      label: 'Ouvrir le rapport',
+      href: '../Projets/S5/Projet Perceptron/Projet Perceptron Decoust Chloé, Delezinier Camille.pdf',
+      downloadName: 'Projet_Perceptron_Rapport.pdf',
+      target: '_blank',
+      primary: true,
+    },
+    {
+      label: 'Télécharger le projet',
+      href: '../Projets/S5/Projet Perceptron/Reseaux_neurones.7z', // À adapter selon votre structure
+      downloadName: 'Reseaux_neurones.7z',
+      primary: false,
+    },
+  ],
+},
   {
   slug: 'projet-dataviz-qlik-sense',
   title: 'Projet de Dataviz Décisionnelle - Qlik Sense',
@@ -613,18 +601,15 @@ const PROJECTS = [
     accent: 'linear-gradient(135deg, #00d4ff, #0099ff)',
     summary: "Création d'une infrastructure Big Data pour collecter, nettoyer et analyser en temps réel la polarité des opinions sur les réseaux sociaux.",
     detailsHtml: `
-    <h3>Technologies et Écosystème Big Data</h3>
-    <p>Apache Kafka, Apache Spark (Spark Streaming / Structured Streaming), HDFS (Hadoop Distributed File System), SparkML (Machine Learning), Python, Dash/Streamlit</p>
+    <h3>Langages et outils utilisés</h3>
+    <p>Apache Kafka, Apache Spark (Spark Streaming / Structured Streaming), HDFS (Hadoop Distributed File System), SparkML, Python, Dash / Streamlit</p>
 
     <h3>Description du projet</h3>
-    <p>Ce projet d'approfondissement consiste à concevoir et déployer une infrastructure de traitement de flux massifs (Streaming) de bout en bout, simulant l'analyse de l'opinion publique sur les réseaux sociaux en temps réel. Le pipeline technique s'articule autour de l'interconnexion de plusieurs briques majeures du Big Data :</p>
-    <ul>
-      <li><strong>Ingestion et Brokerage (Apache Kafka) :</strong> Configuration de producteurs Kafka pour simuler l'envoi continu de flux de données (tweets textuels) répartis au sein de topics et de partitions pour assurer le parallélisme.</li>
-      <li><strong>Traitement de flux et Nettoyage (Spark Streaming) :</strong> Consommation des messages en temps réel depuis le cluster. Application de transformations distribuées, de fenêtres glissantes temporelles pour le calcul d'indicateurs de volumétrie à chaud.</li>
-      <li><strong>Intelligence Artificielle & NLP (SparkML) :</strong> Entraînement et déploiement d'un modèle de classification (Machine Learning appliqué au traitement du langage naturel) capable de prédire instantanément la polarité d'un message (sentiment positif, négatif ou neutre).</li>
-      <li><strong>Stockage de Masse (HDFS) :</strong> Persistance et sérialisation des flux traités, des logs, ainsi que la sauvegarde du modèle ML entraîné directement sur le système de fichiers distribué Hadoop.</li>
-      <li><strong>Supervision (Dashboarding) :</strong> Restitution visuelle des indicateurs streaming calculés et de l'évolution des sentiments sous forme de graphiques mis à jour dynamiquement pour les décideurs.</li>
-    </ul>
+    <p>Ce projet d'approfondissement consiste à concevoir et déployer une infrastructure complexe de traitement de flux massifs de bout en bout, simulant l'analyse de l'opinion publique sur les réseaux sociaux en temps réel. Le pipeline technique mis en œuvre repose sur l'interconnexion fluide de plusieurs briques majeures de l'écosystème Big Data. L'architecture commence par la phase d'ingestion et de brokerage gérée par Apache Kafka, où des producteurs ont été configurés pour simuler l'envoi continu de flux de données textuelles répartis stratégiquement au sein de topics et de partitions afin de garantir un parallélisme optimal et une haute disponibilité.</p>
+    
+    <p>En aval, la brique de traitement et de nettoyage des données s'appuie sur Spark Streaming. Elle consomme les messages en temps réel depuis le cluster et y applique des transformations distribuées ainsi que des fenêtres glissantes temporelles permettant le calcul à chaud d'indicateurs de volumétrie. C'est à ce stade qu'intervient le module d'Intelligence Artificielle développé avec SparkML : un modèle de classification appliqué au traitement du langage naturel (NLP) est entraîné et déployé au cœur du flux pour prédire instantanément la polarité de chaque message, distinguant les sentiments positifs, négatifs ou neutres.</p>
+    
+    <p>Pour assurer la pérennité du système, le stockage de masse est entièrement confié au système de fichiers distribué Hadoop (HDFS), qui gère la persistance et la sérialisation des flux traités, des fichiers de logs ainsi que la sauvegarde du modèle de Machine Learning. Enfin, le projet intègre une dimension de supervision indispensable aux décideurs sous la forme d'un dashboard interactif, chargé de restituer visuellement les indicateurs streaming calculés et l'évolution des sentiments à travers des graphiques mis à jour de manière dynamique.</p>
 
     <h3>Compétences et connaissances acquises</h3>
     <p>Ce projet hautement technique valide l'excellence de votre parcours VCOD dans la gestion des données massives :</p>
@@ -654,44 +639,44 @@ const PROJECTS = [
   // PROJETS ENEDIS (ANCIENNEMENT ALTERNANCE)
   // ------------------------------------------
   {
-  slug: 'projet-biblos-maff-illuin-dialogue',
-  title: 'Biblos MAFF - ILLUIN Dialogue',
-  periode: 'ENEDIS',
-  semester: 'Alternance',
-  date: '2026-05-05', 
-  note: 'Non renseignée',
-  teamSize: 3,
-  image: '../picture/PhotosProjets/RAGbiblosMAFF.png',
-  accent: 'linear-gradient(135deg, #667eea, #764ba2)', 
-  summary: 'Déploiement d\'un agent conversationnel (ChatBox RAG) sur la plateforme ILLUIN Dialogue pour centraliser et automatiser l\'accès à la documentation métier du service AMA.',
-  detailsHtml: `
-    <h3>Technologies et outils utilisés</h3>
-    <p>ILLUIN Dialogue (IA conversationnelle & RAG), Architecture Hybride (Scénarios guidés & LLM Génératif), API & Intégrations SI</p>
+    slug: 'projet-biblos-maff-illuin-dialogue',
+    title: 'Biblos MAFF - ILLUIN Dialogue',
+    periode: 'ENEDIS',
+    semester: 'Alternance',
+    date: '2026-05-05', 
+    note: 'Non renseignée',
+    teamSize: 3,
+    image: '../picture/PhotosProjets/RAGbiblosMAFF.png',
+    accent: 'linear-gradient(135deg, #667eea, #764ba2)', 
+    summary: 'Déploiement d\'un agent conversationnel (ChatBox RAG) sur la plateforme ILLUIN Dialogue pour centraliser et automatiser l\'accès à la documentation métier du service AMA.',
+    detailsHtml: `
+      <h3>Technologies et outils utilisés</h3>
+      <p>ILLUIN Dialogue (IA conversationnelle & RAG), Architecture Hybride (Scénarios guidés & LLM Génératif), API & Intégrations SI</p>
 
-    <h3>Description du projet</h3>
-    <p>Le projet <strong>Biblos MAFF</strong> est né d'un constat opérationnel au sein du service AMA (Agence Marché d’Affaires) : la multiplicité et la dispersion des supports documentaires (guides volumineux, modes opératoires SharePoint, applications métiers) rendaient l'accès à l'information complexe et chronophage pour les agents au quotidien.</p>
-    <p>Pour répondre à ce besoin, l'objectif a été de concevoir et de déployer une ChatBox intelligente servant de guide métier sur la plateforme industrielle <strong>ILLUIN Dialogue</strong>. L'outil repose sur une architecture RAG (Retrieval-Augmented Generation) : lorsqu'un utilisateur pose une question en langage naturel, le système extrait de manière ciblée les informations pertinentes des bases documentaires internes, puis le LLM génère une réponse concise, fiable et exempte d'hallucinations, accompagnée du lien vers la source officielle.</p>
-    <p>Le projet se distingue par la mise en œuvre d'un <strong>mode hybride</strong> performant, combinant une approche guidée (flows de décision, intentions, extraction d'entités et règles métiers strictes) et une approche générative (fluidité conversationnelle). Cette configuration assure un contrôle total des réponses aux procédures critiques tout en offrant une expérience utilisateur naturelle. Le suivi du projet intègre également une dimension analytique (suivi du nombre de conversations, de la durée et du taux de satisfaction) ainsi qu'une démarche itérative d'amélioration continue (enrichissement du corpus et ajustement des prompts).</p>
+      <h3>Description du projet</h3>
+      <p>Le projet <strong>Biblos MAFF</strong> est né d'un constat opérationnel au sein du service AMA (Agence Marché d’Affaires) : la multiplicité et la dispersion des supports documentaires hétérogènes, tels que les guides volumineux, les modes opératoires SharePoint ou les applications métiers, rendaient l'accès à l'information particulièrement complexe et chronophage pour les agents au quotidien. Pour répondre efficacement à ce besoin de réactivité, l'objectif principal a été de concevoir et de déployer une ChatBox intelligente faisant office de guide métier sur la plateforme industrielle <strong>ILLUIN Dialogue</strong>. L'outil repose sur une architecture RAG (Retrieval-Augmented Generation) qui permet, lorsqu'un utilisateur pose une question en langage naturel, d'extraire de manière ciblée les informations pertinentes des bases documentaires internes afin que le LLM génère une réponse concise, fiable et totalement exempte d'hallucinations, accompagnée du lien vers la source officielle.</p>
+      
+      <p>Le projet se distingue techniquement par la mise en œuvre d'un <strong>mode hybride</strong> performant, associant astucieusement une approche guidée à base de flux de décision, d'intentions, d'extraction d'entités et de règles métiers strictes, à une approche générative garantissant la fluidité conversationnelle. Cette configuration assure un contrôle total des réponses apportées aux procédures critiques tout en offrant une expérience utilisateur naturelle. De plus, le suivi de l'outil intègre une dimension analytique rigoureuse permettant de monitorer le nombre de conversations, leur durée et le taux de satisfaction des équipes, s'inscrivant ainsi dans une démarche itérative d'amélioration continue par l'enrichissement du corpus et l'ajustement fin des prompts.</p>
 
-    <h3>Compétences et connaissances acquises</h3>
-    <p>Ce projet d'innovation technologique s'inscrit directement dans les compétences avancées du BUT Science des Données (Parcours VCOD) :</p>
-    <ul>
-      <li><strong>Traiter des données à des fins décisionnelles (Compétence 1) :</strong> Structuration, indexation et traitement de données textuelles complexes et non structurées afin d'alimenter un moteur de recherche sémantique (RAG).</li>
-      <li><strong>Développer un outil décisionnel (Compétence 4) :</strong> Maîtrise d'une solution d'IA conversationnelle d'échelle industrielle. Configuration d'arborescences logiques (flows), paramétrage des intentions, gestion des variables/entités et manipulation d'environnements de test et de production.</li>
-      <li><strong>Cadrage de projet et approche agile :</strong> Participation active aux phases de kickoff, structuration du besoin via le modèle Lean Canvas, gestion des habilitations et prise en compte des contraintes d'indisponibilité et de mise à jour des systèmes.</li>
-      <li><strong>Évaluation de la performance (Analytics) :</strong> Définition et suivi d'indicateurs de performance (KPIs) clés pour évaluer l'adoption de l'outil par les agents, le gain de temps et la précision des réponses fournies.</li>
-    </ul>
-  `,
-  resourceButtons: [
-    {
+      <h3>Compétences et connaissances acquises</h3>
+      <p>Ce projet d'innovation technologique s'inscrit directement dans les compétences avancées du BUT Science des Données (Parcours VCOD) :</p>
+      <ul>
+        <li><strong>Traiter des données à des fins décisionnelles (Compétence 1) :</strong> Structuration, indexation et traitement de données textuelles complexes et non structurées afin d'alimenter un moteur de recherche sémantique (RAG).</li>
+        <li><strong>Développer un outil décisionnel (Compétence 4) :</strong> Maîtrise d'une solution d'IA conversationnelle d'échelle industrielle. Configuration d'arborescences logiques (flows), paramétrage des intentions, gestion des variables/entités et manipulation d'environnements de test et de production.</li>
+        <li><strong>Cadrage de projet et approche agile :</strong> Participation active aux phases de kickoff, structuration du besoin via le modèle Lean Canvas, gestion des habilitations et prise en compte des contraintes d'indisponibilité et de mise à jour des systèmes.</li>
+        <li><strong>Évaluation de la performance (Analytics) :</strong> Définition et suivi d'indicateurs de performance (KPIs) clés pour évaluer l'adoption de l'outil par les agents, le gain de temps et la précision des réponses fournies.</li>
+      </ul>
+    `,
+    resourceButtons: [
+      {
         label: 'Ouvrir le Lean Canvas du projet',
         href: '../Projets/Enedis/RAG/Projet Biblos MAFF - Lean Canvas.pptx',
         downloadName: 'Lean_Canvas_Biblos_MAFF.pptx',
         target: '_blank',
         primary: true,
       },
-  ],
-},
+    ],
+  },
   {
     slug: 'pilotage-crise-climatique',
     title: 'Pilotage de Crise Climatique',
@@ -708,12 +693,7 @@ const PROJECTS = [
       <p>Stage de fin d'études de 12 semaines réalisé au sein d'<strong>Enedis</strong>. L'objectif principal de la mission consistait à accompagner la transition numérique de la Direction Régionale en modernisant les processus d'extraction de données et en développant des outils décisionnels (Business Intelligence) performants pour les équipes métiers et le management.</p>
 
       <h3>Description des missions et projets réalisés</h3>
-      <p>Le travail s'est articulé autour de trois grands axes de la chaîne de la donnée, nécessitant une forte immersion fonctionnelle :</p>
-      <ul>
-        <li><strong>Automatisation des flux de données (ETL) :</strong> Centralisation et nettoyage de sources d'informations hétérogènes. Remplacement de tâches manuelles chronophages par des scripts d'extraction automatisés afin de fiabiliser la qualité des données décisionnelles.</li>
-        <li><strong>Conception de Tableaux de Bord (Dataviz) :</strong> Développement de dashboards interactifs et intuitifs répondant à des besoins opérationnels précis (suivi d'activité, pilotage de la performance, gestion des indicateurs clés). Un accent particulier a été mis sur le Data Storytelling pour rendre la donnée accessible à des profils non techniques.</li>
-        <li><strong>Analyse statistique et Big Data :</strong> Exploitation de bases de données à forte volumétrie pour en extraire des tendances exploitables, identifier les anomalies opérationnelles et proposer des recommandations stratégiques basées sur les faits.</li>
-      </ul>
+      <p>Le travail s'est articulé autour de trois grands axes de la chaîne de la donnée, nécessitant une forte immersion fonctionnelle. En premier lieu, la phase d'automatisation des flux de données (ETL) s'est concentrée sur la centralisation et le nettoyage de sources d'informations hétérogènes, remplaçant avec succès les tâches manuelles chronophages par des scripts d'extraction automatisés afin de fiabiliser la qualité des données décisionnelles. En second lieu, la conception de tableaux de bord interactifs et intuitifs sous Power BI a permis de répondre à des besoins opérationnels critiques tels que la gestion des équipes, le pilotage des pannes et le suivi en temps réel de l'état du réseau et des clients impactés. Un accent tout particulier a été mis sur le Data Storytelling pour rendre la donnée instantanément accessible à des profils non techniques de la cellule de crise. Enfin, l'exploitation de bases de données à forte volumétrie a permis de mener des analyses statistiques descriptives poussées afin d'en extraire des tendances exploitables, d'identifier les anomalies opérationnelles et de formuler des recommandations stratégiques concrètes fondées sur les faits.</p>
 
       <h3>Compétences et connaissances acquises</h3>
       <p>Ce stage de fin de cursus valide l'ensemble des compétences cibles du parcours VCOD en situation professionnelle réelle :</p>
@@ -741,37 +721,32 @@ const PROJECTS = [
     ],
   },
   {
-  slug: 'gestion dépannages',
-  title: 'Passation Gestion Des Dépannages',
-  periode: 'ENEDIS',
-  semester: 'Alternance',
-  date: '2026-06-10', 
-  note: 'Non renseignée',
-  teamSize: 1,
-  image: '../picture/PhotosProjets/GDD.png', // À adapter selon vos visuels
-  accent: 'linear-gradient(135deg, #11998e, #38ef7d)', // Dégradé vert/bleu dynamique axé réseau et infrastructure
-  summary: 'Programmation et industrialisation de scripts d\'automatisation (ETL), requêtage d\'API HTTP et gestion d\'architectures de stockage d\'objets (MinIO) pour le pilotage des dépannages.',
-  detailsHtml: `
-    <h3>Contexte et Enjeux Métiers</h3>
-    <p>Dans le cadre de mon alternance au sein de la Team Numérique d'<strong>Enedis</strong>, j'ai été intégrée au cœur du service des Systèmes d'Information (SI). L'enjeu majeur de mes missions consistait à fiabiliser et fluidifier le pilotage opérationnel des dépannages sur le réseau électrique en remplaçant les processus manuels de collecte par des architectures de données automatisées, industrielles et sécurisées.</p>
+    slug: 'gestion-depannages',
+    title: 'Passation Gestion Des Dépannages',
+    periode: 'ENEDIS',
+    semester: 'Alternance',
+    date: '2026-06-10', 
+    note: 'Non renseignée',
+    teamSize: 1,
+    image: '../picture/PhotosProjets/GDD.png',
+    accent: 'linear-gradient(135deg, #11998e, #38ef7d)',
+    summary: 'Programmation et industrialisation de scripts d\'automatisation (ETL), requêtage d\'API HTTP et gestion d\'architectures de stockage d\'objets (MinIO) pour le pilotage des dépannages.',
+    detailsHtml: `
+      <h3>Contexte et Enjeux Métiers</h3>
+      <p>Dans le cadre de mon alternance au sein de la Team Numérique d'<strong>Enedis</strong>, j'ai été intégrée au cœur du service des Systèmes d'Information (SI). L'enjeu majeur de mes missions consistait à fiabiliser et fluidifier le pilotage opérationnel des dépannages sur le réseau électrique en remplaçant les processus manuels de collecte par des architectures de données automatisées, industrielles et sécurisées.</p>
 
-    <h3>Description des Réalisations Techniques</h3>
-    <p>En me détachant de la simple restitution visuelle, mon travail s'est focalisé sur la conception et l'ingénierie de la chaîne de traitement de données (Back-End) :</p>
-    <ul>
-      <li><strong>Développement de scripts d'automatisation (ETL) :</strong> Programmation de scripts robustes chargés de l'extraction, du nettoyage de données complexes et de la transformation des formats sources en structures relationnelles cohérentes.</li>
-      <li><strong>Interconnexion par requêtes HTTP (API) :</strong> Configuration de flux d'échange de données via des requêtes HTTP pour interroger automatiquement les outils métiers et bases de données internes d'Enedis, garantissant une remontée d'information fluide.</li>
-      <li><strong>Gestion du stockage d'objets (MinIO) :</strong> Modélisation et déploiement d'une solution de stockage de fichiers et de logs via l'écosystème open-source MinIO, permettant de centraliser les historiques de données et d'assurer la résilience de l'infrastructure décisionnelle.</li>
-    </ul>
+      <h3>Description des Réalisations Techniques</h3>
+      <p>En me détachant de la simple restitution visuelle, mon travail s'est focalisé en profondeur sur la conception et l'ingénierie robuste de la chaîne de traitement de données (Back-End). Cela s'est traduit d'abord par le développement de scripts d'automatisation (ETL) sous VBA, programmés pour assurer l'extraction et le nettoyage de données complexes, ainsi que la transformation des formats sources tableaux structurés pour les incidents sur une page et pour le plannig des agents sur une autre page. Pour garantir une remontée d'information fluide et continue, j'ai mis en place l'interconnexion applicative par requêtes HTTP (API), interrogeant automatiquement les outils métiers et bases de données internes d'Enedis. Enfin, l'architecture intègre la gestion avancée du stockage d'objets via la solution open-source MinIO, modélisée et déployée pour centraliser les historiques de données brutes et de logs, sécurisant de bout en bout la résilience technique de l'infrastructure décisionnelle.</p>
 
-    <h3>Compétences et Connaissances Acquises</h3>
-    <p>Cette immersion d'un an en entreprise a validé mes compétences de haut niveau en ingénierie de données du parcours VCOD :</p>
-    <ul>
-      <li><strong>Traiter des données à des fins décisionnelles (Compétence 1) :</strong> Maîtrise complète du cycle de vie de la donnée (insertion, modification, extraction). Capacité à écrire des programmes back-end correctement structurés, documentés et respectant rigoureusement les bonnes pratiques de développement.</li>
-      <li><strong>Automatisation et Interopérabilité des tâches :</strong> Compréhension fine des enjeux liés à la planification de scripts automatiques, à la gestion des dépendances techniques et à l'interconnexion de briques logicielles hétérogènes (API, Serveurs de stockage).</li>
-      <li><strong>Culture SI et Architecture Logicielle :</strong> Sensibilisation avancée aux contraintes d'une Direction des Systèmes d'Information d'envergure nationale (sécurité des données, gestion des environnements, documentation technique adaptée aux experts SI).</li>
-    </ul>
-  `,
-  resourceButtons: [
+      <h3>Compétences et Connaissances Acquises</h3>
+      <p>Cette immersion d'un an en entreprise a validé mes compétences de haut niveau en ingénierie de données du parcours VCOD :</p>
+      <ul>
+        <li><strong>Traiter des données à des fins décisionnelles (Compétence 1) :</strong> Maîtrise complète du cycle de vie de la donnée (insertion, modification, extraction). Capacité à écrire des programmes back-end correctement structurés, documentés et respectant rigoureusement les bonnes pratiques de développement.</li>
+        <li><strong>Automatisation et Interopérabilité des tâches :</strong> Compréhension fine des enjeux liés à la planification de scripts automatiques, à la gestion des dépendances techniques et à l'interconnexion de briques logicielles hétérogènes (API, Serveurs de stockage).</li>
+        <li><strong>Culture SI et Architecture Logicielle :</strong> Sensibilisation avancée aux contraintes d'une Direction des Systèmes d'Information d'envergure nationale (sécurité des données, gestion des environnements, documentation technique adaptée aux experts SI).</li>
+      </ul>
+    `,
+    resourceButtons: [
       {
         label: 'Ouvrir le rapport',
         href: '../Projets/Enedis/GDD/Rapport Alternance - Delezinier Camille (1).pdf',
@@ -786,7 +761,8 @@ const PROJECTS = [
         primary: false,
       },
     ],
-},
+  }
+
 
 ];
 
